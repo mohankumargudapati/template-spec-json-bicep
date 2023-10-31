@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+        {
+            "type": "Microsoft.Authorization/policyAssignments",
+            "apiVersion": "2019-09-01",
+            "name": "applyPolicyToResourceGroup1",
+            "properties": {
+                "displayName": "Apply Policy 1 to Management Group",
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4733ea7b-a883-42fe-8cac-97454c2a9e4a",
+                "scope": "/providers/Microsoft.Management/managementGroups/1c895a7b-94b4-4e20-bf9d-34a5afd39b04"
+            }
+        },
+        {
+            "type": "Microsoft.Authorization/policyAssignments",
+            "apiVersion": "2019-09-01",
+            "name": "applyPolicyToResourceGroup2",
+            "properties": {
+                "displayName": "Apply Policy 2 to Management Group",
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/YourSecondPolicyDefinitionId",
+                "scope": "/providers/Microsoft.Management/managementGroups/1c895a7b-94b4-4e20-bf9d-34a5afd39b04"
+            }
+        }
+    ],
+    "outputs": {}
+}
